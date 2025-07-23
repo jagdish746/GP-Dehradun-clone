@@ -15,7 +15,6 @@
   height: 15vh;
   cursor: pointer;
   max-width: 100%;
-  border-radius: ;
 }
 
 .clgname-heading {
@@ -328,3 +327,163 @@
     width: 40%;
   }
 }
+
+.section-heading {
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 20px;
+  margin: 40px 0 20px;
+  font-weight: bold;
+  color: #002b5b;
+  border-bottom: 2px solid #002b5b;
+}
+
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.course-box {
+  width: 250px;
+  padding: 25px 15px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-box img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.course-box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.course-box p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.course-box a {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.course-box:hover {
+  transform: scale(1.05);
+}
+
+.civil { background-color: #fff;  border: 2px solid #0099cc; }
+.civil a{ background-color:#0099cc; color:#fff; }
+.civil h3 { color: #00356b; }
+.civil p { color: #666666; }
+
+.cse { background-color: #d49e00; }
+.cse a { background-color: #fff; color: #d49e00; }
+
+.it { background-color: #fff; border: 2px solid purple; }
+.it a { background-color: purple; color: #fff; }
+.it h3 { color: #00356b; }
+.it p { color: #666666; }
+
+.mech { background-color: #003f8a; }
+.mech a { background-color: #fff; color: #003f8a; }
+
+.auto { background-color: #8f6c0d; }
+.auto a { background-color: #fff; color: #8f6c0d; }
+
+.electronics { background-color: #fff; border: 2px solid rgb(118, 14, 14);}
+.electronics a{ background-color: #760e0e; color: #fff;}
+.electronics h3 { color: #00356b; }
+.electronics p { color: #666666; }
+
+.pharmacy { background-color: #636e7be6; }
+.pharmacy a { background-color:#fff; color: #636e7be6; }
+
+.electrical { background-color: #482601; }
+.electrical a { background-color: white; color: #9d0404; }
+
+
+.civil:hover {
+  background-color: #0099cc;
+  color: #fff;
+  border: 2px solid #0099cc;
+}
+
+.civil:hover h3,
+.civil:hover p {
+  color: #fff;
+}
+:hover
+.civil:hover a {
+  background-color: #fff;
+  color: #0099cc;
+}
+
+.cse:hover { background-color: #fff; }
+.cse:hover a { background-color: #d49e00; color: #fff; }
+.cse:hover h3{color: #00356b;}
+.cse:hover p {
+  color: #666666;
+}
+
+.it:hover { background-color: purple; border: 2px solid purple; }
+.it:hover a { background-color:#fff ; color: purple; }
+.it:hover h3 { color: #fff; }
+.it:hover p { color: #fff; }
+
+.mech:hover { background-color: #fff; }
+.mech:hover a { background-color: #003f8a; color: #fff; }
+.mech:hover h3 { color: #00356b; }
+.mech:hover p { color: #666666; }
+
+.auto:hover { background-color: #fff; }
+.auto:hover a { background-color: #8f6c0d; color: #fff; }
+.auto:hover h3 { color: #8f6c0d; }
+.auto:hover p { color: #666666; }
+
+
+.electronics:hover { background-color: #760e0e; }
+.electronics:hover a { background-color: #fff; color: #760e0e; }
+.electronics:hover h3 { color: #fff; }
+.electronics:hover p { color: #fff;}
+
+
+.pharmacy:hover { background-color: #fff; }
+.pharmacy:hover a { background-color: #636e7be6; color: #fff; }
+.pharmacy:hover h3 { color: #00356b; }
+.pharmacy:hover p { color: #666666; }
+
+
+.electrical:hover { background-color: #fff; }
+.electrical:hover a { background-color: #95730ee6; color: #fff; }
+.electrical:hover h3 { color: #8f6c0d; }
+.electrical:hover p { color: #666666; }
+
+
+
+@media (max-width: 900px) {
+  .course-box {
+    flex-direction: calc(2);
+    align-items: center;
+    width: 45%;
+
+  }
+}
+@media (max-width: 750px) {
+  .course-box {
+    width: 90%;
+  }
+}
+
