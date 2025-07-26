@@ -260,7 +260,6 @@ ul.navbar li:hover {
   display: flex;
   align-items: center;
   overflow: hidden;
-  /* height: 100%; */
 }
 
 .announcement-text {
@@ -297,37 +296,39 @@ ul.navbar li:hover {
 .container {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.right-section {
+.middle-section {
   flex: 2;
   background-color: #f9f9f9;
   padding: 15px;
-  border: 1px solid #ccc;
 }
 
-.right-section h2 {
+.middle-section h2 {
   color: #003366;
   border-bottom: 3px solid #003366;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.right-section p {
+.middle-section p {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 10px;
   line-height: 1.5;
 }
 
-.left-section {
-  flex: 1;
+.right-section {
+  flex: 0.8;
+  background-color: #E2E2E2;
 }
 
 .notice-board {
-  border: 1px solid #ddd;
+  border: 1px solid #8be406;
   border-radius: 6px;
-  height: 50vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 80%;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: inset 0px 0px 10px rgba(5, 18, 2, 0.8);
 }
 
 .notice-title {
@@ -341,8 +342,7 @@ ul.navbar li:hover {
 
 .notice-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .notice-list li {
@@ -357,13 +357,9 @@ ul.navbar li:hover {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1010px) {
   .container {
-    flex-direction: column;
-  }
-
-  .left-section {
-    order: -1;
+    flex-direction: column-reverse;
   }
 }
 
@@ -381,8 +377,7 @@ ul.navbar li:hover {
 
 .link-box-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
   padding: 20px;
 }
@@ -402,9 +397,9 @@ ul.navbar li:hover {
 }
 
 .boxes img {
-  margin-bottom: 60px;
-  height: 60px;
-  width: 70px;
+  margin-bottom: 40px;
+  height: 50px;
+  width: 60px;
 }
 
 .boxes a {
@@ -434,8 +429,10 @@ ul.navbar li:hover {
   background-color: #f2b48f;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .link-box-container {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: calc(2);
     align-items: center;
   }
@@ -445,10 +442,93 @@ ul.navbar li:hover {
   }
 }
 
+.left-section {
+  background-color: #E08300;
+  width: 20%;
+  gap: 31px;
+  flex-direction: column;
+}
+
+.left-boxes {
+  display: flex;
+
+  gap: 10px;
+  margin: 15px 10px;
+}
+
+.left-img {
+  width: 88px;
+  height: 89px;
+  border: none;
+  border-radius: 15px;
+
+}
+
+.left-name {
+  flex-wrap: wrap;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left-name h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #f9f9f9;
+}
+
+.left-name p {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #f9f9f9;
+}
+
+
+@media (max-width: 1010px) and (min-width:765px) {
+  .left-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  .left-boxes {
+    width: 45%;
+  }
+}
+
+
+@media (max-width:765px) {
+  .left-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+
+  }
+
+  .left-boxes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-name h3 {
+    text-align: center;
+  }
+
+  .left-name p {
+    text-align: center;
+  }
+}
 
 .section-heading {
   text-align: center;
-  /* font-size: 32px; */
   font-family: "Alegreya", Sans-serif;
   padding-bottom: 20px;
   margin: 40px 0 20px;
@@ -782,7 +862,7 @@ ul.navbar li:hover {
 
 .gallery-box {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 230px;
@@ -824,12 +904,12 @@ ul.navbar li:hover {
   .gallery-box {
     width: 45%;
   }
-  
+
 }
 
-  @media (max-width: 750px) {
-    .gallery-box {
-      width: 90%;
-    }
-    
+@media (max-width: 750px) {
+  .gallery-box {
+    width: 90%;
   }
+
+}
