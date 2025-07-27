@@ -325,7 +325,7 @@ ul.navbar li:hover {
 .notice-board {
   border: 1px solid #8be406;
   border-radius: 6px;
-  height: 80%;
+  margin: 15px;
   height: 80%;
   background-color: #fff;
   box-shadow: inset 0px 0px 10px rgba(5, 18, 2, 0.8);
@@ -912,4 +912,69 @@ ul.navbar li:hover {
     width: 90%;
   }
 
+}
+
+
+.page-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+    margin: 20px 0;
+    background-image:
+        linear-gradient(180deg, rgba(1, 53, 20, 0.85), rgba(1, 32, 12, 0.85)),
+        url(https://gpdehradun.org.in/wp-content/uploads/2025/02/gpdehradun3.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-link-boxes {
+    width: 22%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    height: 160px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+
+.icon-svg {
+    width: 35px;
+    fill: #fff;
+}
+
+.circle a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width:765px) {
+    .page-link {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .page-link-boxes {
+        width: 45%;
+    }
+
+    .circle {
+        min-width: 140px;
+        min-height: 140px;
+    }
 }
