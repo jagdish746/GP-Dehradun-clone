@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -916,120 +917,250 @@ ul.navbar li:hover {
 
 
 .page-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 20px;
-    gap: 15px;
-    margin: 20px 0;
-    background-image:
-        linear-gradient(180deg, rgba(1, 53, 20, 0.85), rgba(1, 32, 12, 0.85)),
-        url(https://gpdehradun.org.in/wp-content/uploads/2025/02/gpdehradun3.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+  margin: 20px 0;
+  background-image:
+    linear-gradient(180deg, rgba(1, 53, 20, 0.85), rgba(1, 32, 12, 0.85)),
+    url(https://gpdehradun.org.in/wp-content/uploads/2025/02/gpdehradun3.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .page-link-boxes {
-    width: 22%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 22%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
-    height: 160px;
-    width: 160px;
+  height: 160px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+
+.icon-svg {
+  width: 35px;
+  fill: #fff;
+}
+
+.circle a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width:765px) {
+  .page-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-link-boxes {
+    width: 45%;
+  }
+
+  .circle {
+    min-width: 140px;
+    min-height: 140px;
+  }
+}
+
+
+
+.other-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin: 60px 0;
+
+}
+
+
+.other-links-elements img {
+  /* width: 100%; */
+  height: 80px;
+  object-fit: contain;
+}
+
+.other-links-one,
+.other-links-two {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .other-links-elements img {
+    width: 90%;
+    */ height: 60px;
+  }
+}
+
+@media (max-width: 765px) {
+
+  .other-links-one,
+  .other-links-two {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    border: 4px solid #fff;
-    border-radius: 50%;
-}
+    flex-wrap: wrap;
+    gap: 10px;
 
-.icon-svg {
-    width: 35px;
-    fill: #fff;
-}
+  }
 
-.circle a {
-    text-decoration: none;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
+  .other-links-two {
+    margin-bottom: 8%;
+  }
 
-@media (max-width:765px) {
-    .page-link {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .other-links-one {
+    margin-top: 8%;
+  }
 
-    .page-link-boxes {
-        width: 45%;
-    }
+  .other-links-elements>a>img {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 6%;
+  }
 
-    .circle {
-        min-width: 140px;
-        min-height: 140px;
-    }
+  .other-links-container {
+    background-color: #45484b;
+  }
 }
 
 
-
-.other-links-container{
-    display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-direction: column;
-      gap: 15px;
-      margin: 60px 0;
-      
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-
-.other-links-elements img{
-   /* width: 100%; */
-      height: 80px;
-      object-fit: contain;
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
 }
 
-.other-links-one, .other-links-two{
+.footer {
+  background-color: #9A244C;
   display: flex;
-  justify-content:space-around;
-  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  /* padding: 40px 44px; */
+  font-family: 'Georgia', serif;
+  gap: 30px;
+  color: #ffffff;
 }
 
-@media (max-width: 765px) {
-      .other-links-one, .other-links-two {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        /* margin:5% 0; */
-        
-      }
-      .other-links-two{
-        margin-bottom: 8%;
-      }
-      .other-links-one{
-        margin-top: 8%;
-      }
-      .other-links-elements>a>img {
-        width: 100%;
-        height: 200px;
-        border: none;
-        border-radius: 6%;
-      }
-      .other-links-container{
-        background-color: #45484b;
-      }
-    }
+.footer-boxes1 {
+  width: 280px;
+  text-align: center;
+  font-size: 14px;
+}
 
+.footer-boxes4 {
+  width: 220px;
+}
+
+.footer-boxes2,
+.footer-boxes3 {
+  width: 174px;
+}
+
+.svg-icon1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.clg-namae h2 {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-boxes-heading h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-boxes-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-boxes-items ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.footer-boxes-items ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-boxes4 svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+@media (max-width: 1024px) {
+  .footer {
+    width: 100%;
+  }
+
+  .footer-boxes1 {
+    font-size: 12px;
+  }
+  .footer-boxes-items ul li a {
+    font-size: 12px;
+  }
+  .footer-boxes-items ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-boxes1 {
+    font-size: 12px;
+    flex: 1 1 100%;
+  }
+
+  .footer-boxes-items ul li {
+    justify-content: center;
+  }
+}
